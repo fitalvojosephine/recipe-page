@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Color */
+  --Nutmeg: hsl(14, 45%, 36%);
+  --Dark-Raspberry: hsl(332, 51%, 32%);
+
+  /* Neutral Color */
+  --White-color: hsl(0, 0%, 100%);
+  --Rose-white: hsl(330, 100%, 98%);
+  --Eggshell: hsl(30, 54%, 90%);
+  --Light-grey: hsl(30, 18%, 87%);
+  --Wenge-brown: hsl(30, 10%, 34%);
+  --Dark-Charcoal: hsl(24, 5%, 18%);
+
+  /* Fonts */
+  --outfit: "Outfit", sans-serif;
+  --young-serif: "Young Serif", serif;
+}
+
+body {
+  background-color: var(--Eggshell);
+}
+
+.recipe-page-section {
+  max-width: 100vw;
+  margin: 5.625rem 0px;
+  display: grid;
+  place-items: center;
+}
+
+.recipe-page-container {
+  margin: 0 auto;
+  padding: 1.875rem;
+  background-color: var(--White-color);
+  border-radius: 10px;
+  max-width: 50rem;
+}
+
+.title-overview {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.omelette-image {
+  max-width: 100%;
+  border-radius: 0.625rem;
+  display: block;
+}
+
+.primary-heading {
+  padding-bottom: 0.625rem;
+  font-family: var(--young-serif);
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: var(--Dark-Charcoal);
+}
+
+.description {
+  font-family: var(--outfit);
+  font-size: 1rem;
+  color: var(--Wenge-brown);
+}
+
+.preparation-time-container {
+  background-color: var(--Rose-white);
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+}
+
+h3.title {
+  color: var(--Dark-Raspberry);
+  font-weight: 700;
+  font-family: var(--outfit);
+  font-size: 1.17rem;
+}
+
+.preparation-lists {
+  padding: 0.625rem 1.563rem;
+  font-family: var(--outfit);
+  color: var(--Wenge-brown);
+  line-height: 2;
+}
+
+.preparation-lists > li {
+  padding-left: 1.25rem;
+}
+
+.ingredients-container {
+}
+
+/* Reusable */
+h2 {
+  font-family: var(--young-serif);
+  color: var(--Nutmeg);
+  font-weight: 400;
+  padding-bottom: 1.25rem;
+  padding-top: 1.25rem;
+}
+
+.instructions {
+  border-top: 1px solid var(--Light-grey);
+  border-bottom: 1px solid var(--Light-grey);
+}
+
+.ingredient-list,
+.instruction-list,
+.nutrition-info {
+  list-style-position: inside;
+  padding: 0 0.313rem;
+  color: var(--Wenge-brown);
+  font-family: var(--outfit);
+  line-height: 2;
+  margin-bottom: 1.25rem;
+}
+
+li::marker {
+  color: var(--Nutmeg);
+  font-weight: 700;
+}
+
+.nutrition-container {
+  display: flex;
+  color: var(--Wenge-brown);
+  font-family: var(--outfit);
+  line-height: 2;
+  border-bottom: 1px solid var(--Light-grey);
+  align-items: center;
+}
+
+.nutrition-name {
+  width: 50%;
+  margin-left: 1rem;
+}
+
+.nutrition-serving {
+  grid-column: 2;
+  width: 50%;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.nutrition-serving > span {
+  color: var(--Nutmeg);
+}
+
+.nutrition-container:nth-last-of-type(1) {
+  border: none;
+}
+
+@media screen and (max-width: 50em) {
+  .recipe-page-section {
+    margin: 0;
+  }
+
+  .recipe-page-container {
+    width: 100%;
+  }
+
+  .omelette-image {
+    width: 100%;
+  }
+}
